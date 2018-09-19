@@ -6,7 +6,7 @@ import javax.ws.rs.ApplicationPath;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.context.annotation.Configuration;
 
-import com.filedownload.model.Book;
+import com.filedownload.controller.BookController;
 
 @Configuration
 @ApplicationPath("rest")
@@ -19,6 +19,6 @@ public class JerseyConfiguration extends ResourceConfig{
 	public void setUp() {
 		/** need to register the classes to whom the servlet will delegate the request processing **/
 		System.out.println("<<<<< inside setup registering controller classes >>>>>>");
-		register(Book.class);
+		register(BookController.class);
 	}
 }
