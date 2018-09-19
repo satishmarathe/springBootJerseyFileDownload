@@ -18,7 +18,11 @@ public class BookController {
 	@GET
 	@Produces("application/json")
 	public Collection<Book> getAllBooks() {
-
+		
+		System.out.println(" ");
+		System.out.println("<<<<< inside BookController >>>>> ");
+		System.out.println(" ");
+		
 		Collection<Book> collection = new ArrayList<Book>();
 		populateCollection(collection);
 
